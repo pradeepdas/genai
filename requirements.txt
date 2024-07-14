@@ -1,0 +1,14 @@
+pypdf
+torch
+transformers
+chromadb
+llama-index
+llama-index-core
+llama-index-llms-huggingface
+llama-index-vector-stores-chroma
+llama-index-embeddings-huggingface
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langsmith
