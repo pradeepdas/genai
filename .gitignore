@@ -1,0 +1,85 @@
+.DS_Store
+.idea/
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.ipynb_checkpoints
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit integration-tests / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# HELM things:
+charts/
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Environments
+.env
+.venv
+env/
+venv/
+.envs/
+envs/
+ENV/
+env.bak/
+venv.bak/
+
+# pytype static type analyzer
+.pytype/
+
+# the probes files too large
+*.prompts.jsonl
+/temp/
+/project/artifacts/all # s3 artifact sync location
+
+project/artifacts/harness_config/all/**/*.csv
+project/artifacts/harness_config/all/**/*.jsonl
