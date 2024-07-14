@@ -12,3 +12,10 @@ langchain-community
 langchain-core
 langchain-text-splitters
 langsmith
+requests 
+PyPDF2 
+python-docx 
+pyyaml 
+pandas 
+beautifulsoup4 
+wikipedia
