@@ -7,13 +7,13 @@ from langchain_community.document_loaders import TextLoader
 from langchain_community.document_loaders.csv_loader import CSVLoader
 
 
-def list_txt_files(data_dir="./data"):
+def list_txt_files(data_dir="./tests/test_data"):
     paths = Path(data_dir).glob('**/*.txt')
     for path in paths:
         yield str(path)
 
 
-def load_txt_files(data_dir="./data"):
+def load_txt_files(data_dir="./tests/test_data"):
     docs = []
     paths = list_txt_files(data_dir)
     for path in paths:
@@ -22,8 +22,7 @@ def load_txt_files(data_dir="./data"):
         docs.extend(loader.load())
     return docs
 
-
-def load_csv_files(data_dir="./data"):
+def load_csv_files(data_dir="./tests/test_data"):
     docs = []
     paths = Path(data_dir).glob('**/*.csv')
     for path in paths:
