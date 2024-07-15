@@ -8,8 +8,10 @@ llama-index-llms-huggingface
 llama-index-vector-stores-chroma
 llama-index-embeddings-huggingface
 langchain
-langchain-community
+langchainhub
 langchain-core
+langchain-openai
+langchain-community
 langchain-text-splitters
 langsmith
 requests 
@@ -19,3 +21,4 @@ pyyaml
 pandas 
 beautifulsoup4 
 wikipedia
+rank_bm25

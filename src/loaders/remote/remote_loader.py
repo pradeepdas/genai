@@ -15,6 +15,9 @@ from bs4 import BeautifulSoup
 import wikipedia
 import datetime
 
+from langchain_community.document_loaders import WebBaseLoader, WikipediaLoader
+
+
 def load_content(url, file_format="auto", is_timeseries=False):
     """
     Load content from a URL and return it in structured JSON format.
@@ -82,6 +85,11 @@ def load_content(url, file_format="auto", is_timeseries=False):
     }
     return json.dumps(result, indent=2)
 
+def lc_load_web_page(page_url):
+    loader = WebBaseLoader(page_url)
+    data = loader.load()
+    return data
+
 def load_web_page(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -147,3 +155,10 @@ def load_apple_health_data(url):
 def get_wiki_docs(query):
     summary = wikipedia.summary(query)
     return summary
+
+def lc_get_wiki_docs(query, load_max_docs=2):
+    wiki_loader = WikipediaLoader(query=query, load_max_docs=load_max_docs)
+    docs = wiki_loader.load()
+    for d in docs:
+        print(d.metadata["title"])
+    return docs
